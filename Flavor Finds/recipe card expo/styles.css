@@ -1,0 +1,206 @@
+/* Theme Colors */
+body {
+  background: url("k.png" );
+  background-size: cover; /* Ensures the image covers the entire screen */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed; 
+  background-color: #fff6ed;
+  }
+  
+  .bg-beige {
+    background-color: #fff6ed; /* Warm beige */
+    margin-bottom: 3rem;
+  }
+
+  .text-brown {
+    color: #8b4513; /* Chocolate brown */
+  }
+  
+  .rating .star {
+    font-size: 2rem;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+  }
+  
+  .rating .star.selected {
+    color: #d2691e; /* Golden brown */
+  }
+  
+  .carousel-inner img {
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  /* Comment Box Styling */
+  .bg-comment-box {
+    background-color: #faf6f0;
+    border-radius: 10px;
+    border: 1px solid #f1e1c6;
+  }
+  
+  #comment-input {
+    border-radius: 8px;
+  }
+  
+  #submit-comment {
+    background-color: #8b4513;
+    border: none;
+  }
+  
+  #submit-comment:hover {
+    background-color: #a0522d;
+  }
+  
+  /* Scrollbar for comments */
+  #comment-list {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  #comment-list li {
+    padding: 10px;
+    border-bottom: 1px solid #f1e1c6;
+  }
+  
+
+.nav-list{
+    display: none;
+ }
+nav ul li{
+    list-style: none;
+    display: inline;
+    margin-right: 20px;
+    font-weight: 550;
+    font-size: 22px;
+}
+.logo{
+    font-size: 24px;
+   
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #48015f;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+
+.logo img {
+    height: 65px;
+    width: 324px; 
+}
+.top-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    
+    background-color: #000;
+    color: #ffffff; 
+    font-family: 'Brush Script MT', cursive; 
+}
+
+.top-header p {
+    margin: 0;
+    font-size: 35px;
+    font-weight: 300;
+    font-family: 'Brush Script MT', cursive;
+}
+
+
+.container-59{
+    width: 90%;
+    margin: 0 auto;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+.signup-btn {
+  background-color: #754814; 
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: 'Brush Script MT';
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: #ff6347; 
+}
+a{
+  text-decoration: none;
+  color: white;
+  text-decoration: solid;
+}
+/* Footer Styling */
+footer {
+  background-color: #000; /* Pure black background */
+  color: #f8f9fa; /* Light text */
+  padding: 2rem 0;
+}
+
+footer h5 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: #f8f9fa;
+  border-bottom: 2px solid #ffc107; /* Golden underline for headings */
+  display: inline-block;
+  padding-bottom: 0.2rem;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+footer ul li a {
+  color: #f8f9fa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: #ffc107; /* Golden hover effect */
+}
+
+footer .list-inline-item {
+  margin-right: 1rem;
+}
+
+footer .list-inline-item a {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+footer .list-inline-item a i {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  color: #ffc107; /* Golden color for icons */
+}
+
+footer hr {
+  border-color: #444;
+}
+
+footer .text-center {
+  font-size: 0.9rem;
+  color: #bbb; /* Subtle grey for copyright */
+}
+
+footer .text-center p {
+  margin-bottom: 0;
+}

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookbook Showcase</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="f5.png">
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('bg57.png');
+            
+            background-size: cover;
+   
+        }
+
+      
+        .container {
+        
+    margin-top: 50px;
+    margin-left: 361px;
+    margin-bottom: 50px;
+
+            background-color:white;
+            max-width: 700px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+      
+        h1 {
+            color: #d2691e;
+            font-size: 2em;
+            margin: 0;
+        }
+
+        .author {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+      
+        .book-image {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border-radius: 10px;
+            margin: 15px 0;
+            transition: transform 0.2s;
+        }
+
+        .book-image:hover {
+            transform: scale(1.05);
+        }
+
+       
+        .summary {
+            font-size: 1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        
+        .price {
+            font-size: 1.5em;
+            color: #d2691e;
+            margin: 10px 0;
+        }
+
+        
+        .buy-button {
+            background-color: #d2691e;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .buy-button:hover {
+            background-color: #b3571b;
+        }
+        nav ul li{
+    list-style: none;
+    display: inline;
+    margin-right: 20px;
+    font-weight: 550;
+    font-size: 22px;
+}
+.logo{
+    font-size: 24px;
+   
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #48015f; /* Blue theme background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for a professional look */
+    color: #ffffff; /* White text color for contrast */
+    position: sticky; /* Keeps the header fixed at the top when scrolling */
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo img {
+    height: 50px;
+    width: 250px;
+     /* Maintain aspect ratio */
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* White text */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffd700; /* Golden text on hover */
+}
+.top-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    
+    background-color: #000;
+    color: #ffffff; 
+    font-family: 'Brush Script MT', cursive; 
+}
+
+.top-header p {
+    margin: 0;
+    font-size: 35px;
+    font-weight: 300;
+    font-family: 'Brush Script MT', cursive;
+}
+
+
+.container-59{
+    width: 95%;
+    margin: 0 auto;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+.signup-btn {
+  background-color: #754814; 
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: 'Brush Script MT';
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: #ff6347; 
+}
+a{
+  text-decoration: none;
+  color: white;
+  text-decoration: solid;
+}
+
+footer {
+  background-color: #000; /* Pure black background */
+  color: #f8f9fa; /* Light text */
+  padding: 3px;
+}
+
+footer h4 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: #f8f9fa;
+  border-bottom: 2px solid #ffc107; /* Golden underline for headings */
+  display: inline-block;
+  padding-bottom: 0.2rem;
+}
+
+footer ul {
+  list-style:none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+footer ul li a {
+  color: #f8f9fa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: #ffc107; /* Golden hover effect */
+}
+
+footer .list-inline-item {
+  margin-right: 1rem;
+
+}
+footer p{
+    text-align: initial;
+    font-size: 17px;
+}
+
+footer .list-inline-item a {
+    display: flex;
+  align-items: center;
+  font-size: 17px;
+}
+
+footer .list-inline-item a i {
+  font-size: 17px;
+  margin-right: 0.5rem;
+  color: #ffc107; /* Golden color for icons */
+}
+
+footer hr {
+  border-color: #444;
+}
+
+footer .text-center {
+  font-size: 0.9rem;
+  color: #bbb; /* Subtle grey for copyright */
+}
+
+footer .text-center p {
+  margin-bottom: 0;
+}
+.row{
+    display:flex;
+    max-width: 100%;
+}
+.col-md-4 mb-3{
+    padding-right: 20px;
+
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container-59">
+            <div class="logo">
+                <img src="mlogo.png" alt="Logo">
+            </div>
+            <nav>
+              <ul>
+                <a href="index.html"><li>Home</li></a>
+                <a href="Connect.html"><li>Connect</li></a>
+                <a href="Cookbook.html"><li>Cookbook</li></a>
+                <a href="Account.html"><li>Account</li></a>
+                <a href="About Us.html"><li>About</li></a>
+
+              </ul>
+
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <h1>
+            The Andhra Cookbook</h1>
+        <p class="author">by  Komala Sista Rao</p>
+        
+        <img src="cookbook2.jpg" alt="Cookbook Cover" class="book-image">
+        
+        <p class="summary">
+            Komala Sista Rao, a former singer and mother of pop singer and stage actress Suneeta Rao, presents a compilation of her family’s culinary legacy – well-chosen, delectable vegetarian Andhra home recipes.
+
+            The Andhra Cookbook breaks stereotypes of Andhra food being all about chillies or too spicy for most palates. Offering recipes with a depth of flavours and several ideas for novices and experts alike, this cookbook will encourage you to relish and experiment with Andhra cooking.
+            
+      
+        <p class="price">$24.99</p>
+        
+        <a href="buy-now-link.html" class="buy-button">Buy Now</a>
+    </div>
+    <div class="container">
+        <h1>
+            The Barefoot Contessa Cookbook</h1>
+        <p class="author">by Ina Garten</p>
+        
+        <img src="cookbook3.jpg" alt="Cookbook Cover" class="book-image">
+        
+        <p class="summary">
+          It’s hard to find someone who isn’t charmed by chef Ina Garten, her recipes, her laugh, and her love for her husband, Jeffrey — and her love of entertaining. Garten has influenced a generation of home cooks with her gorgeous cookbooks and TV shows, but The Barefoot Contessa is perhaps the most notable. The book’s recipes center on the titular gourmet-food store in the Hamptons, which Garten bought in 1978. Unsurprisingly, Garten's timeless recipes are an inspiration for chef Asha Gomez, author of My Two Souths and I Cook In Color, who is also a master entertainer. 
+
+          “If I had to pick one book, it would be The Barefoot Contessa Cookbook,” she says. "The reason is simple — it played a significant role in my culinary journey. While I initially learned Indian cooking in my mother's kitchen, mastering the art of everyday cooking in the US as a first-generation immigrant happened through the pages of The Barefoot Contessa."
+            
+      
+        <p class="price">$20.99</p>
+        
+        <a href="buy-now-link.html" class="buy-button">Buy Now</a>
+    </div>
+    <div class="container">
+        <h1>
+            Six Seasons</h1>
+        <p class="author">by Joshua McFadden</p>
+        
+        <img src="cookbook4.jpg" alt="Cookbook Cover" class="book-image">
+        
+        <p class="summary">
+          In his first cookbook, Joshua McFadden shares his vast knowledge of vegetables and, specifically, how to transform them into the main attraction. The Portland, Oregon-based chef and restaurant owner honed his skills in notable restaurants, including Blue Hill and Momofuku in New York and the renowned Four Season Farm in Maine. With 225 visionary recipes that include a pickling section and a collection of compound butters for more than just steak, the book has been praised by Dan Barber, Nigella Lawson, and David Chang, and, in a starred review, Publisher’s Weekly called it “A must-have cookbook that stands out from the crowd of vegetable-centric cookbooks.” 
+
+          Kat Petonito, the executive chef of the duck & the peach, La Collina, and The Wells in Washington, D.C., calls it her go-to book when she hits a seasonal creativity roadblock. “I love how he splits the typical seasons up because not all seasonal vegetables are available as soon as their ‘season’ starts,” she says. “It's also just a visually beautiful book.”
+        <p class="price">$54.99</p>
+        
+        <a href="buy-now-link.html" class="buy-button">Buy Now</a>
+    </div>
+    <div class="container">
+        <h1>
+            Bombay Kitchen</h1>
+        <p class="author">by Niloufer Ichaporia</p>
+        
+        <img src="cookbook5.jpg" alt="Cookbook Cover" class="book-image">
+        
+        <p class="summary">
+          My Bombay Kitchen was the first book on Parsi food published in the United States, and its 165 recipes won it a James Beard Award in 2008. But it’s not just a cookbook. Author Niloufer Ichaporia King takes the reader on a journey rich with her own personal experience and techniques grounded in Parsi cuisine, which combines influences from the Middle East and South Asia.
+
+          "One of the most influential cookbooks in my life has been My Bombay Kitchen by Niloufer Ichaporia King,” says Meherwan Irani, co-founder, chef and CEO of Chai Pani Restaurant Group. “It taught me things about being a Parsi that I didn't realize, as well as captured the influence the Parsi diaspora had on Indian cuisine, changing the way I look at the entirety of Indian food forever."
+      
+        <p class="price">$30.99</p>
+        
+        <a href="buy-now-link.html" class="buy-button">Buy Now</a>
+    </div>
+   
+
+    <footer class="bg-dark text-light py-4">
+        <div class="container-59">
+          <div class="row">
+            <!-- About Section -->
+            <div class="col-md-4 mb-3" style="padding-right: 100px; width: 45%; padding-left: 30px;">
+              <h4 class="text-uppercase">About Flavor Finds</h4>
+              <p>Flavour Finds is your go-to platform for sharing and discovering recipes from around the world. Connect, share, and enjoy cooking!</p>
+            </div>
+      
+            <!-- Contact Details -->
+            <div class="col-md-4 mb-3" style="padding-right: 100px;">
+              <h4 class="text-uppercase">Contact Us</h4>
+              <ul class="list-unstyled">
+                <li>Email: <a href="mailto:support@flavourfinds.com" class="text-light">support@flavourfinds.com</a></li>
+                <li>Phone: +1 (123) 456-7890</li>
+                <li>Address: 123 Culinary Lane, Foodie City</li>
+              </ul>
+            </div>
+      
+            <!-- Social Media Links -->
+            <div class="col-md-4 mb-3" style="padding-left: 100px; display: block;">
+                <h4 class="text-uppercase">Follow Us</h4>
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <a href="https://facebook.com" target="_blank" class="text-light">
+                      <i class="bi bi-facebook"></i> Facebook
+                    </a>
+                  </li>
+                  <li class="list-inline-item ms-3">
+                    <a href="https://instagram.com" target="_blank" class="text-light">
+                      <i class="bi bi-instagram"></i> Instagram
+                    </a>
+                  </li>
+                  <li class="list-inline-item ms-3">
+                    <a href="https://twitter.com" target="_blank" class="text-light">
+                      <i class="bi bi-twitter"></i> Twitter
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+      
+         
+        </div>
+    
+        <hr class="bg-secondary">
+        <div class="text-center">
+          <p class="mb-0" style="text-align: center; padding-bottom: 5px;">&copy; 2024 Flavour Finds. All Rights Reserved.</p>
+        </div>
+      </footer>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Resume Builder</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            /* background-color:#f0f4f8; */
+           background-image:  url(https://img.freepik.com/free-photo/close-up-view-fresh-vegetables-dinner-preparation-table_140725-147802.jpg?t=st=1732359553~exp=1732363153~hmac=290addcd1b27924bd64272ecaa82f810bf4454d2a87f36c527e0bf7ddb7bd482&w=1380);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            margin-left: 630px;
+            margin-top: 150px;
+
+
+        }
+
+        .card {
+            border-radius: 10px;
+            background-color: #f0f4f8;
+        }
+
+        h2 {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+
+        .card-body {
+            padding: 40px;
+        }
+
+        .form-group {
+            transition: transform 0.3s ease;
+        }
+
+        .form-group:hover {
+            transform: scale(1.02);
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .text-center a {
+            color: #007bff;
+            transition: color 0.3s ease;
+        }
+
+        .text-center a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow mt-5">
+                    <div class="card-body">
+                        <h2 class="text-center">Create Your Account</h2>
+                        <p class="text-center">Join us to build your professional resume!</p>
+                        <form id="formID">
+                            <div class="form-group">
+                                <label for="username">Full Name</label>
+                                <input type="text" class="form-control" name="username" id="username" placeholder="Enter your full name"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email address</label>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" name="password" id="password"
+                                    placeholder="Create a password" required>
+                            </div>
+                            <input type="submit" class="btn btn-primary btn-block" value="Sign Up">
+                        </form>
+                        <p class="text-center mt-3">Already have an account? <a href="login1.html">Log in</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        let allSignUpDataArray =
+        JSON.parse(localStorage.getItem("sign_upData")) || [];
+
+        const formElement = document.getElementById("formID");
+        formElement.addEventListener("submit", function (event) {
+            event.preventDefault();
+            //collecting the form data
+            let formData = new FormData(event.target);
+            //converting form data to the JavaScript object.
+            let obj = {};
+            formData.forEach(function (v, k) {
+                obj[k] = v;
+            });
+            //appending the new user details to the localStorage
+            allSignUpDataArray.push(obj);
+            let allSignUpDataArrayJson =
+                JSON.stringify(allSignUpDataArray);
+            localStorage.setItem("sign_upData",
+                allSignUpDataArrayJson);
+            console.log(allSignUpDataArray);
+            alert("UserRegistered Sucessfully !");
+            formElement.reset();
+        }
+        );
+
+
+    </script>
+</body>
+
+</html>

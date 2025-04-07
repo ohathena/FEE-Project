@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect - Flavour Finds</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="f5.png">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url(bg57.png);
+            background-size:cover;
+            background-attachment: fixed; /* Light blue background */
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #0081b0; /* Blue theme background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for a professional look */
+    color: #ffffff; /* White text color for contrast */
+    position: sticky; /* Keeps the header fixed at the top when scrolling */
+    top: 0;
+    z-index: 1000;
+}
+header .logo img {
+    height: 50px;
+    width: 100px;
+    width: auto; /* Maintain aspect ratio */
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* White text */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffd700; /* Golden text on hover */
+}
+.top-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    
+    background-color: #000;
+    color: #ffffff; 
+    font-family: 'Brush Script MT', cursive; 
+}
+
+.top-header p {
+    margin: 0;
+    font-size: 35px;
+    font-weight: 300;
+    font-family: 'Brush Script MT', cursive;
+}
+
+
+.container-59{
+    width: 95%;
+    margin: 0 auto;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+.signup-btn {
+  background-color: #754814; 
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: 'Brush Script MT';
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: #ff6347; 
+}
+a{
+  text-decoration: none;
+  color: white;
+  text-decoration: solid;
+}
+  
+
+        header nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        .container {
+            width: 70%;
+            max-width: 800px;
+            margin: 30px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #D2691E; /* Vibrant blue */
+        }
+
+        .post-box {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        .profile-pic {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #ccc;
+            margin-right: 15px;
+        }
+
+        .post-content {
+            flex: 1;
+        }
+
+        .post-header {
+            font-weight: bold;
+            color: #0081b0;
+        }
+
+        .post-header .username {
+            margin-right: 10px;
+        }
+
+        .post-header .timestamp {
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        .post-text {
+            margin-top: 5px;
+            line-height: 1.4;
+            color: #555;
+        }
+
+        .new-post {
+            margin-bottom: 30px;
+        }
+
+        .new-post textarea {
+            width: 95%;
+            height: 80px;
+            resize: none;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .new-post button {
+            background-color: #0081b0;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .new-post button:hover {
+            background-color: #005f80;
+        }
+
+        footer {
+  background-color: #000; /* Pure black background */
+  color: #f8f9fa; /* Light text */
+  padding: 3px;
+}
+
+footer h4 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: #f8f9fa;
+  border-bottom: 2px solid #ffc107; /* Golden underline for headings */
+  display: inline-block;
+  padding-bottom: 0.2rem;
+}
+
+footer ul {
+  list-style:none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+footer ul li a {
+  color: #f8f9fa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: #ffc107; /* Golden hover effect */
+}
+
+footer .list-inline-item {
+  margin-right: 1rem;
+
+}
+footer p{
+    text-align: initial;
+    font-size: 17px;
+}
+
+footer .list-inline-item a {
+    display: flex;
+  align-items: center;
+  font-size: 17px;
+}
+
+footer .list-inline-item a i {
+  font-size: 17px;
+  margin-right: 0.5rem;
+  color: #ffc107; /* Golden color for icons */
+}
+
+footer hr {
+  border-color: #444;
+}
+
+footer .text-center {
+  font-size: 0.9rem;
+  color: #bbb; /* Subtle grey for copyright */
+}
+
+footer .text-center p {
+  margin-bottom: 0;
+}
+.row{
+    display:flex;
+    max-width: 100%;
+}
+.col-md-4 mb-3{
+    padding-right: 20px;
+
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #48015f; /* Blue theme background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for a professional look */
+    color: #ffffff; /* White text color for contrast */
+    position: sticky; /* Keeps the header fixed at the top when scrolling */
+    top: 0;
+    z-index: 1000;
+}
+header .logo img {
+    height: 50px;
+    width: 250px;
+     /* Maintain aspect ratio */
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* White text */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffd700; /* Golden text on hover */
+}
+.top-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    
+    background-color: #000;
+    color: #ffffff; 
+    font-family: 'Brush Script MT', cursive; 
+}
+
+.top-header p {
+    margin: 0;
+    font-size: 35px;
+    font-weight: 300;
+    font-family: 'Brush Script MT', cursive;
+}
+
+
+.container-59{
+    width: 95%;
+    margin: 0 auto;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+.signup-btn {
+  background-color: #754814; 
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: 'Brush Script MT';
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: #ff6347; 
+}
+a{
+  text-decoration: none;
+  color: white;
+  text-decoration: solid;
+}
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="mlogo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+              <a href="index.html"><li>Home</li></a>
+              <a href="My Recipe.html"><li>My Recipes</li></a>
+              <a href="Cookbook.html"><li>Cookbook</li></a>
+              <a href="Account.html"><li>Account</li></a>
+              <a href="About Us.html"><li>About</li></a>
+
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Connect with Others</h1>
+        <div class="new-post">
+            <textarea placeholder="What's on your mind?"></textarea>
+            <button>Post</button>
+        </div>
+        <div class="post-box">
+            <div class="profile-pic"></div>
+            <div class="post-content">
+                <div class="post-header">
+                    <span class="username">@foodie123</span>
+                    <span class="timestamp">5 mins ago</span>
+                </div>
+                <p class="post-text">Just tried a new pancake recipe, and it's amazing! 🥞</p>
+            </div>
+        </div>
+        <div class="post-box">
+            <div class="profile-pic"></div>
+            <div class="post-content">
+                <div class="post-header">
+                    <span class="username">@bakingQueen</span>
+                    <span class="timestamp">2 hours ago</span>
+                </div>
+                <p class="post-text">Anyone has tips on making the perfect sourdough bread?</p>
+            </div>
+        </div>
+        <div class="post-box">
+            <div class="profile-pic"></div>
+            <div class="post-content">
+                <div class="post-header">
+                    <span class="username">@chefMike</span>
+                    <span class="timestamp">1 day ago</span>
+                </div>
+                <p class="post-text">Hosting a BBQ tonight! What's your go-to sauce recipe?</p>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-dark text-light py-4">
+        <div class="container-59">
+          <div class="row">
+            <!-- About Section -->
+            <div class="col-md-4 mb-3" style="padding-right: 100px; width: 45%; padding-left: 30px;">
+              <h4 class="text-uppercase">About Flavor Finds</h4>
+              <p style="color: white;">Flavour Finds is your go-to platform for sharing and discovering recipes from around the world. Connect, share, and enjoy cooking!</p>
+            </div>
+      
+            <!-- Contact Details -->
+            <div class="col-md-4 mb-3" style="padding-right: 100px;">
+              <h4 class="text-uppercase">Contact Us</h4>
+              <ul class="list-unstyled">
+                <li>Email: <a href="mailto:support@flavourfinds.com" class="text-light">support@flavourfinds.com</a></li>
+                <li>Phone: +1 (123) 456-7890</li>
+                <li>Address: 123 Culinary Lane, Foodie City</li>
+              </ul>
+            </div>
+      
+            <!-- Social Media Links -->
+            <div class="col-md-4 mb-3" style="padding-left: 100px; display: block;">
+                <h4 class="text-uppercase">Follow Us</h4>
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <a href="https://facebook.com" target="_blank" class="text-light">
+                      <i class="bi bi-facebook"></i> Facebook
+                    </a>
+                  </li>
+                  <li class="list-inline-item ms-3">
+                    <a href="https://instagram.com" target="_blank" class="text-light">
+                      <i class="bi bi-instagram"></i> Instagram
+                    </a>
+                  </li>
+                  <li class="list-inline-item ms-3">
+                    <a href="https://twitter.com" target="_blank" class="text-light">
+                      <i class="bi bi-twitter"></i> Twitter
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+      
+         
+        </div>
+    
+        <hr class="bg-secondary">
+        <div class="text-center">
+          <p class="mb-0" style="text-align: center; padding-bottom: 5px; color: white;">&copy; 2024 Flavour Finds. All Rights Reserved.</p>
+        </div>
+      </footer>
+</body>
+</html>

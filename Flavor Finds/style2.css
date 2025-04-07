@@ -1,0 +1,155 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+  }
+  .company-name{
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 70px;
+      color: #000000;
+      text-align:center;
+      margin-bottom: 80%;;
+    }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url(hoyhoy.jpg);
+    
+    background-position: center;
+    background-size: cover;
+  }
+  
+  section {
+      position: relative;
+      max-width: 400px;
+      background-color:transparent;
+      border: 2px solid rgba(228, 153, 84, 0.5);
+      border-radius: 20px;
+      backdrop-filter: blur(55px);
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      padding: 2px 3px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #e5771d;
+    text-align: center;
+}
+  h2 {
+      font-size: 2rem;
+      color:#e5771d;
+      text-align: center;
+  }
+  
+  .inputbox {
+      position: relative;
+      margin: 30px 0;
+      max-width: 310px;
+      border-bottom: 2px solid #070606;
+  }
+  
+  .inputbox label {
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      transform: translateY(-50%);
+      color: #e5771d;
+      font-size: 1rem;
+      pointer-events: none;
+      transition: all 0.5s ease-in-out;
+  }
+  
+  input:not(:placeholder-shown) ~ label, 
+  input:valid ~ label {
+      top: -5px;
+  } 
+   
+  .inputbox input {
+      width: 100%;
+      height: 70px;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      padding: 0 35px 0 5px;
+      color:#e5771d;
+  }
+  
+  .inputbox ion-icon {
+      position: absolute;
+      right: 8px;
+      color: #e5771d;
+      font-size: 1.2rem;
+      top: 20px;
+  }
+  
+  .forget {
+      margin: 35px 0;
+      font-size: 0.85rem;
+      color: #e5771d;
+      display: flex;
+      justify-content: space-between;
+   
+  }
+  
+  .forget label {
+      display: flex;
+      align-items: center;
+  }
+  
+  .forget label input {
+      margin-right: 10px;
+  }
+  
+  .forget a {
+      color:  #e5771d;
+      text-decoration: none;
+      font-weight: 600;
+  }
+  
+  .forget a:hover {
+      text-decoration: underline;
+  }
+  
+  button {
+      width: 100%;
+      height: 40px;
+      border-radius: 40px;
+      background-color: #e5771d;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: all 0.4s ease;
+  }
+  
+  button:hover {
+    background-color:#f3b07a;
+  }
+  
+  .register {
+      font-size: 0.9rem;
+      color:  #e5771d;
+      text-align: center;
+      margin: 25px 0 10px; 
+  }
+  
+  .register p a {
+      text-decoration: none;
+      color: #c25d0b;
+      font-weight: 600;
+  }
+  
+  .register p a:hover {
+      text-decoration: underline;
+  }
